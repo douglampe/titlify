@@ -1,0 +1,39 @@
+{
+  "name": "titlify",
+  "version": "1.0.0",
+  "description": "Tiny node module to parse various strings into words and capitalize the first letter of each word.",
+  "homepage": "http://github.com/douglampe/titlify",
+  "author": {
+    "name": "Doug Lampe",
+    "url": "http://www.douglampe.com"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib\\index.js",
+  "keywords": [
+    ""
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-xo-space": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "http://github.com/douglampe/titlify.git",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  }
+}
