@@ -11,7 +11,11 @@ var plumber = require('gulp-plumber');
 gulp.task('static', function () {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
-    .pipe(eslint())
+    .pipe(eslint({
+      rules: {
+        'linebreak-style': 0
+      }
+    }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
@@ -21,7 +25,7 @@ gulp.task('nsp', function (cb) {
 });
 
 gulp.task('pre-test', function () {
-  return gulp.src('lib\**\*.js')
+  return gulp.src('lib/**/*.js')
     .pipe(excludeGitignore())
     .pipe(istanbul({
       includeUntested: true
